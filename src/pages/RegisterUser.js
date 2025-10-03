@@ -8,21 +8,18 @@ export default function RegisterUser() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     try {
+      await API.post('/auth/register', { username, email, password });
+
       const res = await API.post('/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       navigate('/');
-    } catch {
-      alert('Login failed');
+    } catch (err) {
+      console.error(err);
+      alert('Registration or login failed');
     }
-  };
-
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    const register = await API.post('/auth/register', {username, email, password});
-    await handleLogin();
   };
 
   return (
@@ -41,7 +38,7 @@ export default function RegisterUser() {
           <input type="password" className="form-control" placeholder="Password"
             value={password} onChange={e => setPassword(e.target.value)} required />
         </div>
-        <button className="btn btn-primary">Register</button>
+        <button type="submit" className="common-btn">Register</button>
       </form>
     </div>
   );

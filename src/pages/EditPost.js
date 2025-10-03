@@ -78,7 +78,7 @@ export default function EditPost() {
             <img src={preview} alt="new" className="img-thumbnail" />
           ) : image ? (
             <img
-              src={`http://localhost:5000${image}`}
+              src={image}
               alt="old"
               className="img-thumbnail"
             />

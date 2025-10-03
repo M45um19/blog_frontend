@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://blog-backend-95kf.onrender.com/api'
+  baseURL: process.env.REACT_APP_API_URL || 'https://blog-backend-gc0w.onrender.com/api'
 });
 
 API.interceptors.request.use(config => {

@@ -24,7 +24,7 @@ useEffect(() => {
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
               <img
-                src={`http://localhost:5000${post.imageUrl}`}
+                src={post.imageUrl}
                 className="d-block w-100"
                 alt={post.title}
                 style={{ height: "500px", objectFit: "cover" }}

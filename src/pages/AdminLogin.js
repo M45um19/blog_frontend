@@ -20,7 +20,7 @@ export default function AdminLogin() {
 
   return (
     <div className="container mt-4 w-50">
-      <h2 className='text-center'>Admin Login</h2>
+      <h2 className='text-center'>Login</h2>
       <form onSubmit={handleLogin} className='mt-4'>
         <div className="mb-3">
           <input type="email" className="form-control" placeholder="Email"
@@ -30,7 +30,7 @@ export default function AdminLogin() {
           <input type="password" className="form-control" placeholder="Password"
             value={password} onChange={e => setPassword(e.target.value)} required />
         </div>
-        <button className="btn btn-primary">Login</button>
+        <button className="common-btn">Login</button>
       </form>
     </div>
   );

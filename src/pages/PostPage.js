@@ -51,11 +51,12 @@ export default function PostPage() {
 <h2 className='text-center'>{post.title}</h2>
 {post.imageUrl && (
   <img 
-    src={`http://localhost:5000${post.imageUrl}`} 
+    src={post.imageUrl}
     alt={post.title} 
     className="w-75 mb-3 rounded mx-auto d-block mt-5" 
   />
 )}
+
 
 {/* Render content with HTML markup */}
 <div 

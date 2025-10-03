@@ -86,7 +86,7 @@ export default function Home() {
               <div key={post._id} className="col-md-4 mb-3 mt-3">
                 <div className="card h-100 shadow-sm">
                   <img
-                    src={`http://localhost:5000${post.imageUrl}`}
+                    src={post.imageUrl}
                     className="card-img-top p-3"
                     alt={post.title}
                   />
@@ -159,7 +159,7 @@ export default function Home() {
                 <div key={post._id} className="col-md-4 mb-3 mt-3">
                   <div className="card h-100 shadow-sm">
                     <img
-                      src={`http://localhost:5000${post.imageUrl}`}
+                      src={post.imageUrl}
                       className="card-img-top p-3"
                       alt={post.title}
                     />
